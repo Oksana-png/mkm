@@ -1,0 +1,217 @@
+.banner {
+  &__bg {
+    position: relative;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background-image: url(../img/picture/advantages-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 60px 60px 55px 57px;
+    @include laptop {
+      padding: 40px 40px 101px 40px;
+    }
+    @include tablet768 {
+      padding: 20px 15px 0 15px;
+    }
+    @include phone {
+      border-radius: 0;
+      margin: 0 -15px;
+    }
+  }
+  &__text {
+    max-width: 517px;
+    @include laptop {
+      position: relative;
+      z-index: 3;
+      max-width: 100%;
+    }
+    & p {
+      font-size: 24px;
+      color: $c-light-txt;
+      margin-bottom: 40px;
+      @include laptop {
+        max-width: 397px;
+      }
+      @include tablet768 {
+        font-size: 20px;
+        text-align: center;
+        max-width: 100%;
+      }
+    }
+    & .btn {
+      @include tablet768 {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 40px;
+      }
+      @include small {
+        padding: 12px 23px;
+        width: 100%;
+      }
+    }
+  }
+  &__image {
+    position: absolute;
+    right: 114px;
+    top: -22px;
+    height: calc(100% + 22px);
+    @include desktop {
+      right: 29px;
+    }
+    @include laptop {
+      height: auto;
+      bottom: 0;
+      top: auto;
+    }
+    @include laptop {
+      height: 391px;
+    }
+    @include tablet768 {
+      position: relative;
+      height: 311px;
+      width: 290px;
+      right: auto;
+      margin: 0 auto;
+    }
+    &-rocket {
+      position: relative;
+      width: 440px;
+      height: calc(100% + 22px);
+      z-index: 2;
+      @include laptop {
+        width: 340px;
+        height: 391px;
+        bottom: 0;
+      }
+      @include tablet768 {
+        width: 270px;
+        height: 311px;
+        margin-left: auto;
+        display: block;
+      }
+    }
+    & p {
+      position: absolute;
+      padding: 20px 40px;
+      background-color: $c-white;
+      border-radius: 100px;
+      max-width: 241px;
+      color: $c-primary;
+      font-weight: 700;
+      @include desktop {
+        max-width: 178px;
+        font-size: 14px;
+      }
+      &:last-child {
+        bottom: 55px;
+        right: -50px;
+        z-index: 1;
+        @include desktop {
+          padding-left: 20px;
+          right: 6px;
+        }
+        @include laptop {
+          padding-left: 40px;
+          padding-right: 20px;
+          bottom: 39px;
+          right: -19px;
+        }
+        @include tablet768 {
+          padding: 16px 40px 16px 20px;
+          max-width: 183px;
+          bottom: 107px;
+          left: 0;
+          right: auto;
+        }
+      }
+    }
+    & .banner__image-first {
+      bottom: 181px;
+      left: -17px;
+      @include desktop {
+        left: 55px;
+        padding-left: 20px;
+      }
+      @include laptop {
+        bottom: 122px;
+        left: 8px;
+      }
+      @include tablet768 {
+        padding: 16px 40px 16px 20px;
+        max-width: 208px;
+        left: 0;
+        top: 0;
+        bottom: auto;
+      }
+    }
+  }
+
+  &-line {
+    padding: 16px 0;
+    background-color: #FF5F57;
+    & .wrapper {
+      position: relative;
+    }
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 40px;
+      @include desktop {
+        justify-content: space-between;
+        max-width: calc(100% - 185px);
+        margin-left: auto;
+        gap: 24px;
+      }
+      @include tablet768 {
+        flex-direction: column;
+        align-items: flex-end;
+        max-width: 100%;
+      }
+    }
+    &__present {
+      position: absolute;
+      left: -16px;
+      bottom: -58px;
+      width: 160px;
+      min-height: 180px;
+      @include desktop {
+        bottom: -28px;
+      }
+      @include tablet768 {
+        width: 88px;
+        min-height: 100px;
+        left: -10px;
+      }
+      @include phone {
+        left: 10px;
+        bottom: -38px;
+      }
+    }
+    & p {
+      font-size: 24px;
+      color: $c-white;
+      max-width: 550px;
+      @include tablet768 {
+        font-size: 20px;
+      }
+    }
+    @include desktop {
+      & .social {
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-shrink: 0;
+        width: 239px;
+        @include tablet768 {
+          justify-content: flex-end;
+          width: auto;
+          text-align: center;
+        }
+        & .btn {
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+}

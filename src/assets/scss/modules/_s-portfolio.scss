@@ -1,0 +1,182 @@
+.s-portfolio {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  & h2 {
+    margin-bottom: 45px;
+  }
+
+  &-slider {
+    overflow: hidden;
+    max-width: 970px;
+    @include laptop {
+      max-width: 738px;
+    }
+    @include phone {
+      margin: 0 -15px;
+      width: calc(100% + 30px) !important;
+    }
+    & .swiper-slide {
+      padding: 15px 15px 30px 15px;
+    }
+    &__slide {
+      box-shadow: $shadow;
+      border-radius: 16px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 270px;
+      grid-template-rows: 500px;
+      gap: 30px;
+      @include tablet768 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+      }
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @include tablet768 {
+          aspect-ratio: 1 / 0.6;
+          min-height: 290px;
+        }
+      }
+    }
+    &__slider {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    &__btn {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $c-white;
+      border-radius: 36px;
+      cursor: pointer;
+      transition: box-shadow .3s linear;
+      @include hover {
+        &:hover {
+          box-shadow: $shadow;
+        }
+      }
+      @include tablet768 {
+        top: 120px;
+        transform: none;
+      }
+      &.prev {
+        left: -95px;
+        @include laptop {
+          left: 0;
+        }
+        @include phone {
+          left: -15px;
+        }
+        & .icon {
+          transform: rotate(180deg);
+        }
+      }
+      &.next {
+        right: -95px;
+        @include laptop {
+          right: 0;
+        }
+        @include phone {
+          right: -15px;
+        }
+      }
+    }
+  }
+  &-slider-thambs {
+    height: inherit;
+  }
+  &__slider {
+    position: relative;
+    @include tablet768 {
+      width: 100%;
+    }
+  }
+  &__thambs {
+    height: 154px;
+    width: 100%;
+    margin-bottom: 30px;
+    @include laptop {
+      height: 93px;
+    }
+    & .swiper-slide {
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: opacity .3s ease;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: background-color .3s ease;
+      }
+      @include hover {
+        &:hover {
+          &::before {
+            background-color: rgba(63, 51, 128, 0.3);
+          }
+        } 
+      }
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.slider-info {
+  padding: 40px 40px 40px 0;
+  display: flex;
+  flex-direction: column;
+  @include tablet768 {
+    padding: 24px;
+    padding-top: 0;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    & a {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      text-decoration: underline;
+      color: $c-primary;
+      &::after {
+        content: '';
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-image: url('../img/icons/arrow-up-right.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+  & .btn {
+    margin-top: auto;
+    width: fit-content;
+    @include tablet768 {
+      margin-top: 30px;
+    }
+  }
+}
+
+.swiper {
+  width: 100%;
+}

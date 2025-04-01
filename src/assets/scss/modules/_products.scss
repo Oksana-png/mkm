@@ -1,0 +1,92 @@
+.products {
+  background-color: $c-primary;
+  color: $c-white;
+  padding: 120px 0;
+  & h2 {
+    color: inherit;
+  }
+  &__head {
+    background-color: $c-primary-light;
+    border-radius: 39px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    &-btn {
+      position: relative;
+      padding: 12px 24px 12px 60px;
+      background-color: transparent;
+      font-size: 24px;
+      font-weight: 900;
+      white-space: nowrap;
+      border-radius: 100px;
+      border: 2px solid transparent;
+      color: $c-white;
+      display: flex;
+      align-items: center;
+      transition: all .3s ease;
+      &.active {
+        background-color: $c-white;
+        color: $c-main;
+      }
+      & img {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 54px;
+        min-height: 76px;
+        transform: translateY(-50%);
+        transition: transform .3s ease;
+      }
+      @include hover {
+        &:hover {
+          border-color: $c-white;
+          & img {
+            transform: scale(1.15) translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+  &__body {
+    &-item {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 1s ease;
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      &.active {
+        opacity: 1;
+        max-height: 1000px;
+      }
+    }
+  }
+  &-tab {
+    &__item {
+      flex: 1 1 0px;
+      padding: 20px 15px;
+      text-align: center;
+      background-color: $c-primary-light;
+      border-radius: 16px;
+      & h4 {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 12px;
+      }
+      & h3 {
+
+        margin-bottom: 20px;
+      }
+      & ul {
+        padding: 0 5px;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: left;
+        color: #D2CFE5;
+        display: grid;
+        gap: 4px;
+      }
+    }
+  }
+}

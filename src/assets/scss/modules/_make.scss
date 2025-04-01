@@ -1,0 +1,64 @@
+.make {
+  &__text {
+    position: relative;
+    &-img {
+      position: absolute;
+      top: -37px;
+      left: 0;
+      width: 270px;
+      min-height: 366px;
+      @include desktop {
+        min-height: 326px;
+        width: 240px;
+        top: 14px;
+        left: -15px;
+      }
+      @include tablet768 {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 147px;
+        min-height: 200px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    &-content {
+      padding-left: 300px;
+      @include desktop {
+        padding-left: 270px;
+      }
+      @include tablet768 {
+        padding-left: 0;
+      }
+      & p {
+        font-size: 24px;
+        color: #5F5980;
+        margin-bottom: 40px;
+        @include tablet768 {
+          font-size: 20px;
+        }
+      }
+    }
+    & ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+      @include laptop {
+        grid-template-columns: 1fr 1fr;
+      }
+      @include phone {
+        grid-template-columns: 1fr;
+      }
+    }
+    & li {
+      border-top: 1px solid $c-light-txt;
+      padding-top: 12px;
+      font-weight: 900;
+      font-size: 24px;
+      @include tablet768 {
+        font-size: 20px;
+      }
+    }
+  }
+}

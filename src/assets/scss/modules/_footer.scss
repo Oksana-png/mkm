@@ -1,0 +1,67 @@
+.footer {
+  &__main {
+    padding: 40px 0;
+    background-color: $c-main;
+    color: $c-white;
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include laptop {
+        align-items: flex-start;
+      }
+      @include tablet768 {
+        flex-wrap: wrap;
+        gap: 40px;
+        & .logo {
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+  &__nav {
+    @include phone {
+      flex-basis: 100%;
+    }
+    & ul {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      @include laptop {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      @include phone {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    @include laptop {
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+    }
+  }
+  &__copy {
+    color: $c-light-txt;
+    background-color: $c-main;
+    border-top: 1px solid #5F5980;
+    padding: 20px 0;
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include tablet768 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+    }
+  }
+}

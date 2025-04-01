@@ -1,0 +1,47 @@
+.header {
+  padding: 20px 0;
+  &.fixed {
+    box-shadow: $shadow;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__nav {
+    @include desktop {
+      display: none;
+    }
+    & ul {
+      display: flex;
+      align-items: center;
+      gap: 52px;
+    }
+  }
+  &__phone {
+    font-weight: 900;
+    font-size: 24px;
+    color: $c-primary;
+    @include tablet768 {
+      display: none;
+    }
+  }
+  &__social {
+    @include small {
+      display: none;
+    }
+  }
+}
+
+.burger {
+  padding: 13px;
+  border-radius: 36px;
+  background-color: #fff;
+  transition: box-shadow .3s ease;
+  @include hover {
+    &:hover {
+      box-shadow: 0 8px 24px rgba(31, 5, 57, 0.15);
+    }
+  }
+}
+
