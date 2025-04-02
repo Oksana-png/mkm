@@ -18,6 +18,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // табы тарифы
+  const btnsTarif = document.querySelectorAll(".tarif__btn");
+  const bodyTarif = document.querySelectorAll(".tarif__body-item");
+  btnsTarif.forEach((btn, i) => {
+    btn.addEventListener("click", (e) => {
+      const btn = e.target;
+
+      btnsTarif.forEach((btn2, index) => {
+        if (i == index) {
+          btn2.classList.add("active");
+          bodyTarif[index].classList.add("active");
+        } else {
+          btn2.classList.remove("active");
+          bodyTarif[index].classList.remove("active");
+        }
+      });
+    });
+  });
+
   // inputMask
   let phones = document.querySelectorAll("input[type=tel]");
   let im = new Inputmask("+7 (999) 999 99-99");
@@ -56,7 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Слайдер портфолио главная
   var swiper = new Swiper(".s-portfolio-slider-thambs", {
-    loop: true,
     spaceBetween: 30,
     slidesPerView: 4,
     freeMode: true,
@@ -78,7 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
   var swiper2 = new Swiper(".s-portfolio-slider", {
-    loop: true,
     navigation: {
       nextEl: ".s-portfolio-slider__btn.next",
       prevEl: ".s-portfolio-slider__btn.prev",
@@ -86,5 +103,54 @@ document.addEventListener("DOMContentLoaded", () => {
     thumbs: {
       swiper: swiper,
     },
+  });
+
+  // скрывать/раскрывать списки в продукции (мобилка)
+  function faqStart() {
+    const faq = document.querySelectorAll(".products__mobile-item");
+    faq.forEach((tab) => {
+      const title = tab.querySelector(".products__mobile-arrow");
+      title.addEventListener("click", () => {
+        tab.classList.toggle("active");
+      });
+    });
+  }
+  faqStart();
+
+  // появление фиксированной шапки при скролле
+  const scrollHeader = () => {
+    scrollStart();
+    window.addEventListener("scroll", (e) => {
+      scrollStart();
+    });
+
+    function scrollStart() {
+      const header = document.querySelector(".header");
+      if (window.pageYOffset >= 400) {
+        header.classList.add("fixed");
+      } else if (window.pageYOffset < 400) {
+        header.classList.remove("fixed");
+      }
+    }
+  };
+  scrollHeader();
+
+  // бургер менюшка
+  const burgerBtn = document.querySelector(".burger");
+  const headerMobile = document.querySelector(".header-mobile");
+  const overlay = document.querySelector(".overlay");
+  const header = document.querySelector(".header");
+  burgerBtn.addEventListener("click", () => {
+    burgerBtn.classList.toggle("active");
+    headerMobile.classList.toggle("active");
+    overlay.classList.toggle("active");
+    header.classList.toggle("active");
+
+    overlay.addEventListener("click", () => {
+      burgerBtn.classList.toggle("active");
+      headerMobile.classList.toggle("active");
+      overlay.classList.toggle("active");
+      header.classList.toggle("active");
+    });
   });
 });

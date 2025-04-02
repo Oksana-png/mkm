@@ -3,6 +3,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    &>a {
+      @include small {
+        width: 100%;
+        text-align: center;
+      }
+    }
   }
   & h2 {
     margin-bottom: 45px;
@@ -173,6 +179,10 @@
     width: fit-content;
     @include tablet768 {
       margin-top: 30px;
+    }
+    @include small {
+      width: 100%;
+      text-align: center;
     }
   }
 }

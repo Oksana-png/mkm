@@ -138,3 +138,20 @@ path {
     }
   }
 }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+  background-color: rgba(63, 51, 128, .3);
+  max-height: 0;
+  transition: all .3s linear;
+  &.active {
+    max-height: 100vh;
+  }
+}

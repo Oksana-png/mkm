@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header fixed">
       <div class="wrapper">
         <div class="header__wrapper">
           <a class="header__logo" href="/">
@@ -44,10 +44,38 @@
             </a>
           </div>
           <button class="burger">
-            <svg class="icon">
+            <svg class="icon open">
               <use xlink:href="assets/img/icons/sprite/sprite.svg#burger"></use>
             </svg>
+            <svg class="icon close">
+              <use xlink:href="assets/img/icons/sprite/sprite.svg#close"></use>
+            </svg>
           </button>
+          <div class="header-mobile">
+            <img
+              class="logo"
+              src="assets/img/logo-white.svg"
+              alt="logo: mkm web"
+            />
+            <nav>
+              <a href="#">Портфолио</a>
+              <a href="#">Продукты и тарифы</a>
+              <a href="#">О компании</a>
+              <a href="#">AI-Help</a>
+            </nav>
+            <a href="" class="header__phone">+7 916 7777620</a>
+            <div class="social header__social">
+              <a href="https://wa.me/79167777620" target="_blank">
+                <img
+                  src="assets/img/icons/whatsapp.png"
+                  alt="picture whatsapp"
+                />
+              </a>
+              <a href="https://t.me/tonirovka_zaSteklom" target="_blank">
+                <img src="assets/img/icons/telega.png" alt="picture telegram" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -214,7 +242,7 @@
           </div>
           <div class="s-portfolio__thambs">
             <div class="s-portfolio__thambs">
-              <div thumbsSlider="" class="swiper s-portfolio-slider-thambs">
+              <div class="swiper s-portfolio-slider-thambs">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <img src="assets/image/portfolio/portfolio-1.jpg" />
@@ -346,6 +374,173 @@
                 </div>
               </div>
             </div>
+            <div class="products__mobile">
+              <div class="products__mobile-block">
+                <h3>
+                  <img src="assets/img/picture/gold-key.png" alt="gold key" />
+                  Создание сайта под ключ
+                </h3>
+                <div class="products__mobile-item active">
+                  <div class="products__mobile-title">
+                    <div class="products__mobile-title-wrap">
+                      <h4>Корпоративный сайт</h4>
+                      <strong>от 100 000 ₽</strong>
+                    </div>
+                    <button class="products__mobile-arrow">
+                      <svg class="icon">
+                        <use
+                          xlink:href="assets/img/icons/sprite/sprite.svg#arrow-narrow-up"
+                        ></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="products__mobile-content">
+                    <ul>
+                      <li>Исследование рынка и конкурентов</li>
+                      <li>Составление семантического ядра</li>
+                      <li>Создание структуры сайта</li>
+                      <li>UX и UI дизайн</li>
+                      <li>Программирование и вёрстка</li>
+                      <li>Установка сайта на подходящую систему управления</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="products__mobile-item">
+                  <div class="products__mobile-title">
+                    <div class="products__mobile-title-wrap">
+                      <h4>Сайт услуг/сайт каталог</h4>
+                      <strong>от 100 000 ₽</strong>
+                    </div>
+                    <button class="products__mobile-arrow">
+                      <svg class="icon">
+                        <use
+                          xlink:href="assets/img/icons/sprite/sprite.svg#arrow-narrow-up"
+                        ></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="products__mobile-content">
+                    <ul>
+                      <li>Исследование рынка и конкурентов</li>
+                      <li>Составление семантического ядра</li>
+                      <li>Создание структуры сайта</li>
+                      <li>UX и UI дизайн</li>
+                      <li>Программирование и вёрстка</li>
+                      <li>Установка сайта на подходящую систему управления</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="products__mobile-item">
+                  <div class="products__mobile-title">
+                    <div class="products__mobile-title-wrap">
+                      <h4>Лэндинг</h4>
+                      <strong>от 100 000 ₽</strong>
+                    </div>
+                    <button class="products__mobile-arrow">
+                      <svg class="icon">
+                        <use
+                          xlink:href="assets/img/icons/sprite/sprite.svg#arrow-narrow-up"
+                        ></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="products__mobile-content">
+                    <ul>
+                      <li>Исследование рынка и конкурентов</li>
+                      <li>Составление семантического ядра</li>
+                      <li>Создание структуры сайта</li>
+                      <li>UX и UI дизайн</li>
+                      <li>Программирование и вёрстка</li>
+                      <li>Установка сайта на подходящую систему управления</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="products__mobile-block">
+                <h3>
+                  <img
+                    src="assets/img/picture/vedenie.png"
+                    alt="Ведение сайтов"
+                  />
+                  Ведение и поддержка сайта
+                </h3>
+                <div class="products__mobile-item active">
+                  <div class="products__mobile-title">
+                    <div class="products__mobile-title-wrap">
+                      <h4>Корпоративный сайт</h4>
+                      <strong>от 100 000 ₽</strong>
+                    </div>
+                    <button class="products__mobile-arrow">
+                      <svg class="icon">
+                        <use
+                          xlink:href="assets/img/icons/sprite/sprite.svg#arrow-narrow-up"
+                        ></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="products__mobile-content">
+                    <ul>
+                      <li>Исследование рынка и конкурентов</li>
+                      <li>Составление семантического ядра</li>
+                      <li>Создание структуры сайта</li>
+                      <li>UX и UI дизайн</li>
+                      <li>Программирование и вёрстка</li>
+                      <li>Установка сайта на подходящую систему управления</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="products__mobile-item">
+                  <div class="products__mobile-title">
+                    <div class="products__mobile-title-wrap">
+                      <h4>Сайт услуг/сайт каталог</h4>
+                      <strong>от 100 000 ₽</strong>
+                    </div>
+                    <button class="products__mobile-arrow">
+                      <svg class="icon">
+                        <use
+                          xlink:href="assets/img/icons/sprite/sprite.svg#arrow-narrow-up"
+                        ></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="products__mobile-content">
+                    <ul>
+                      <li>Исследование рынка и конкурентов</li>
+                      <li>Составление семантического ядра</li>
+                      <li>Создание структуры сайта</li>
+                      <li>UX и UI дизайн</li>
+                      <li>Программирование и вёрстка</li>
+                      <li>Установка сайта на подходящую систему управления</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="products__mobile-item">
+                  <div class="products__mobile-title">
+                    <div class="products__mobile-title-wrap">
+                      <h4>Лэндинг</h4>
+                      <strong>от 100 000 ₽</strong>
+                    </div>
+                    <button class="products__mobile-arrow">
+                      <svg class="icon">
+                        <use
+                          xlink:href="assets/img/icons/sprite/sprite.svg#arrow-narrow-up"
+                        ></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="products__mobile-content">
+                    <ul>
+                      <li>Исследование рынка и конкурентов</li>
+                      <li>Составление семантического ядра</li>
+                      <li>Создание структуры сайта</li>
+                      <li>UX и UI дизайн</li>
+                      <li>Программирование и вёрстка</li>
+                      <li>Установка сайта на подходящую систему управления</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -466,6 +661,113 @@
           </div>
         </div>
       </section>
+
+      <section class="tarif">
+        <div class="wrapper">
+          <h2>Продукты и тарифы</h2>
+          <div class="tarif__head">
+            <button class="tarif__btn active">
+              <img src="assets/img/picture/videogame-gold.png" alt="" />
+              Анализ данных с ИИ
+            </button>
+            <button class="tarif__btn">
+              <img src="assets/img/picture/content-II.png" alt="" />
+              Контент с ИИ
+            </button>
+          </div>
+          <div class="tarif__body">
+            <div class="tarif__body-item active">
+              <button class="tarif__btn">
+                <img src="assets/img/picture/videogame-gold.png" alt="" />
+                Анализ данных с ИИ
+              </button>
+              <div class="tarif__body-content">
+                <p>
+                  Искусственный интеллект (ИИ) кардинально меняет подход к
+                  анализу данных в сфере маркетинга. Современные технологии ИИ
+                  позволяют обрабатывать и анализировать  терабайты данных с
+                  невероятной скоростью и точностью, предоставляя ценную
+                  информацию для оптимизации рекламных кампаний и повышения их
+                  эффективности.
+                </p>
+                <p>
+                  Современные системы могут обрабатывать до 10^12 (1 триллион)
+                  записей, что позволяет выявлять тренды и паттерны, которые
+                  были бы недоступны при ручном анализе. Система может
+                  анализировать данные о миллионах пользователей, их поведении,
+                  предпочтениях и взаимодействиях с рекламными кампаниями.
+                </p>
+                <p>
+                  С помощью ИИ мы можем предсказывать будущие тренды и поведение
+                  потребителей на основе анализа исторических данных. Это
+                  позволит заранее адаптировать стратегии и максимально
+                  эффективно распределить рекламные бюджеты.
+                </p>
+                <p>
+                  Возможности ИИ дают конкурентное преимущество на рынке и
+                  значительно повышают эффективность рекламных кампаний.
+                </p>
+              </div>
+              <button class="btn btn-white">Заявка на консультацию</button>
+              <ul class="tarif__body-list">
+                <li>
+                  <img src="assets/img/icons/ChatGPT_logo.svg" alt="" />
+                  o1-prewiew
+                </li>
+                <li>
+                  <img src="assets/img/icons/ChatGPT_logo.svg" alt="" />
+                  o1-mini
+                </li>
+                <li>
+                  <img src="assets/img/icons/ChatGPT_logo.svg" alt="" />
+                  GPT-4o-mini
+                </li>
+              </ul>
+            </div>
+            <div class="tarif__body-item">
+              <button class="tarif__btn">
+                <img src="assets/img/picture/videogame-gold.png" alt="" />
+                Контент с ИИ
+              </button>
+              <div class="tarif__body-content">
+                <p>Контент с ИИ</p>
+                <p>
+                  Современные системы могут обрабатывать до 10^12 (1 триллион)
+                  записей, что позволяет выявлять тренды и паттерны, которые
+                  были бы недоступны при ручном анализе. Система может
+                  анализировать данные о миллионах пользователей, их поведении,
+                  предпочтениях и взаимодействиях с рекламными кампаниями.
+                </p>
+                <p>
+                  С помощью ИИ мы можем предсказывать будущие тренды и поведение
+                  потребителей на основе анализа исторических данных. Это
+                  позволит заранее адаптировать стратегии и максимально
+                  эффективно распределить рекламные бюджеты.
+                </p>
+                <p>
+                  Возможности ИИ дают конкурентное преимущество на рынке и
+                  значительно повышают эффективность рекламных кампаний.
+                </p>
+              </div>
+              <button class="btn btn-white">Заявка на консультацию</button>
+              <ul class="tarif__body-list">
+                <li>
+                  <img src="assets/img/icons/ChatGPT_logo.svg" alt="" />
+                  o1-prewiew
+                </li>
+                <li>
+                  <img src="assets/img/icons/ChatGPT_logo.svg" alt="" />
+                  o1-mini
+                </li>
+                <li>
+                  <img src="assets/img/icons/ChatGPT_logo.svg" alt="" />
+                  GPT-4o-mini
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
@@ -506,6 +808,8 @@
         </div>
       </div>
     </footer>
+
+    <div class="overlay"></div>
 
     <div class="modal-hidden modal__form">
       <div class="body">

@@ -15,6 +15,7 @@ html {
 }
 
 body {
+  position: relative;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
@@ -144,4 +145,8 @@ textarea {
 
 svg {
   transition: .3s ease-out;
+}
+
+main {
+  padding-top: 90px;
 }
